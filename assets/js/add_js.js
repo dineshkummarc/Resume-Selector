@@ -82,6 +82,21 @@ var reject_button = document.getElementsByClassName("reject");
 
 choice();
 
+
+function show_file(){
+  var sh_f=document.getElementsByClassName("show_file");
+  if(document.getElementById("applicant_option").checked === true){
+      sh_f[0].style.display='block';
+  }
+  if(document.getElementById("recruiter_option").checked === true){
+      sh_f[0].style.display='none';
+  }
+
+
+}
+
+
+
 /*
 ////////////////////slideshow///////////////////////////
 
