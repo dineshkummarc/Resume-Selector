@@ -190,7 +190,7 @@ table{
 
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 18px;
+    font-size: 18px
     font-family:  "Raleway", sans-serif;
     width: 100%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -381,15 +381,19 @@ table{
 #recruiter-table .accept_msg{
 	color: green;
 	font-weight: bolder;
-	 font-size: 18px;
+	 font-size: 18px
     font-family:  "Raleway", sans-serif;
 }
 
 
 #recruiter-table .reject_msg{
 	color: red;
-	 font-size: 18px;
+	 font-size: 18px
     font-family:  "Raleway", sans-serif;
+}
+
+.show_file{
+	display: none;
 }
 
 .accept{
@@ -402,7 +406,7 @@ table{
 }
 
 .reject{
-	 font-size: 18px;
+	 font-size: 18px
     font-family:  "Raleway", sans-serif;
  	background-color: palegoldenrod;
     color: midnightblue; 
