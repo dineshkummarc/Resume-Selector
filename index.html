@@ -115,13 +115,30 @@
   <div class="form-container sign-in-container">
     <form action="#">
       <h1>Login</h1>
-     
+      
+       <div class="radio_but" >
+        <div style="padding-right: 12px;">
+      <input type="radio" id="recruiter_option" name="type_user" value="recruiter" onclick="show_file()">
+      Recruiter
+      </div>
+
+      <div style="padding-left: 12px ;">
+      <input type="radio" id="applicant_option" name="type_user" value="applicant" onclick="show_file()">
+      Applicant
+      </div>
+
+      </div>
+
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
-      
+
+
+      <div class="show_file">
       <h4>or</h4>
-      <input type="file" name="">
-     
+      <input type="file" name="resume">
+      </div>
+
+
       <button>Login</button>
 
     </form>
