@@ -1,0 +1,1 @@
+skills: engineering, sh, scripting, cryptography, access, algorithms, css, coding, js, ai, visual, machine learning, r, javascript, python, android, c++, programming, computer science, html, c#, octave, gis, os, information technology, ui, c, java, security, certification, sap, conda, training, windows, networking, gmail, html5, shell 

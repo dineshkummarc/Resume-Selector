@@ -127,17 +127,18 @@ if __name__ == '__main__':
 		Take resume filepath as input and parse it and print attributes of resume
 		like  skills, college, disciplanes, degree, designation
 	"""
-	files=glob.glob("Sample_Resume/*.pdf")	# extract all pdf
+	files=glob.glob("Resume/*.pdf")	# extract all pdf
 	query = "USE DATABASE SSD"
-	cursor.execute(query)
+	#cursor.execute(query)
 
 	for filePath in files:
 		
 		file_Name=filePath.split("/")[-1].rsplit('.', 1)[0]+".txt"
 		outputPath="extracted_Resume/"+file_Name
-		#print(file_Name)
-		f = open(file_Name, "w")
+		skillOutputPath="extracted_Resume_Skills/"+file_Name
 		
+		#print(file_Name)
+		f = open(outputPath, "w")		
 		Parser,mobile_number,email=loadData(filePath)
 		
 		try:
@@ -157,10 +158,10 @@ if __name__ == '__main__':
 
 		f.close()
 
-		query = "UPDATE users SET resume_path=(%s) WHERE file_path == (%s)"		
-		VALUES = (outputPath,filePath)
+		query = "UPDATE users SET parsed_file_path=(%s) WHERE file_path == (%s)"		
+		values = (skillOutputPath,filePath)
 
-		f = open(file_Name, "r")
+		f = open(outputPath, "r")
 		contents = f.read()
 
 		newcontents = contents.replace('{',' ')
@@ -168,12 +169,22 @@ if __name__ == '__main__':
 		newcontents = newcontents.replace("'",'')
 		newcontents = newcontents.replace("'",'')
 		newcontents = newcontents.replace(r'\n',' ')
-		values = (filePath,outputPath)
 		
 		print()
 		f.close()
-		f=open(file_Name, "w")
+		f=open(outputPath, "w")
 		f.write(newcontents)
 		f.close()
-		cursor.execute(query,values)
-		db.commit()
+
+		skillsParsed=""
+		for i in range(0,len(newcontents)-3):
+			if(newcontents[i]=='$' and newcontents[i+1]=='$' and newcontents[i+2]=='$'):
+				break
+			skillsParsed+=newcontents[i]
+
+		f=open(skillOutputPath,'w')
+		f.write(skillsParsed)
+		f.close()
+
+		#cursor.execute(query,values)
+		#db.commit()
