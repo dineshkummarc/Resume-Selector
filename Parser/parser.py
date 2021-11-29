@@ -1,3 +1,5 @@
+#!C:\Users\Windows 10\AppData\Local\Programs\Python\Python37
+
 """"
 The way PDF Miner reads in PDF is line by line. Thus, the text from the left and right
 sections will be combined together if they are found to be on the same line. 
@@ -27,7 +29,7 @@ email={}
 mobile_number = {}
 attribute={}
 
-db = mysql.connect(host = "localhost",user = "root",passwd = "password",database="")
+db = mysql.connect(host = "localhost",user = "root",passwd = "",database="ssd",port=3307)
 #print(db)
 
 ## creating an instance of 'cursor' class which is used to execute the 
@@ -123,19 +125,30 @@ def loadData(filePath):
 
 
 if __name__ == '__main__':
+
+
+
 	"""
 		Take resume filepath as input and parse it and print attributes of resume
 		like  skills, college, disciplanes, degree, designation
 	"""
+
+	if sys.stdout.encoding != 'cp850':
+		sys.stdout = codecs.getwriter('cp850')(sys.stdout.buffer, 'strict')
+	if sys.stderr.encoding != 'cp850':
+		sys.stderr = codecs.getwriter('cp850')(sys.stderr.buffer, 'strict')
+
 	files=glob.glob("Resume/*.pdf")	# extract all pdf
-	query = "USE DATABASE SSD"
-	#cursor.execute(query)
+	# query = "USE DATABASE SSD"
+	# #cursor.execute(query)
 
 	for filePath in files:
 		
-		file_Name=filePath.split("/")[-1].rsplit('.', 1)[0]+".txt"
-		outputPath="extracted_Resume/"+file_Name
-		skillOutputPath="extracted_Resume_Skills/"+file_Name
+		file_Name=filePath.split("\\")[-1].rsplit('.', 1)[0]+".txt"
+		outputPath="extracted_Resume\\"+file_Name
+		#print(file_Name)
+		#break
+		skillOutputPath="extracted_Resume_Skills\\"+file_Name
 		
 		#print(file_Name)
 		f = open(outputPath, "w")		
@@ -150,16 +163,23 @@ if __name__ == '__main__':
 
 		attribute["mobile_number"]={mobile_number}
 		attribute["email"]={email}
-		attribute["Resume"]={Parser}
+		#attribute["Resume"]={Parser}
 
 		for key,values in attribute.items():
+			
 			f.write('%s:%s\n' % (key, values))
 			f.write("$$$\n")	# end delimiator for a key,skill
 
 		f.close()
 
-		query = "UPDATE users SET parsed_file_path=(%s) WHERE file_path == (%s)"		
-		values = (skillOutputPath,filePath)
+		print(filePath)
+		#break
+
+		#new_file_path=filePath.replace('\\','/')
+		
+
+		query = "UPDATE users SET parsedfile_path=(%s) WHERE file_path = (%s);"	
+		values = (skillOutputPath.replace('\\','/'),filePath.replace('\\','/'))
 
 		f = open(outputPath, "r")
 		contents = f.read()
@@ -170,7 +190,7 @@ if __name__ == '__main__':
 		newcontents = newcontents.replace("'",'')
 		newcontents = newcontents.replace(r'\n',' ')
 		
-		print()
+		#print()
 		f.close()
 		f=open(outputPath, "w")
 		f.write(newcontents)
@@ -186,5 +206,5 @@ if __name__ == '__main__':
 		f.write(skillsParsed)
 		f.close()
 
-		#cursor.execute(query,values)
-		#db.commit()
+		cursor.execute(query,values)
+		db.commit()

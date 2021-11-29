@@ -14,12 +14,6 @@ signInButton.addEventListener('click', () => {
 });
 
 
-function fun(){
-
-  console.log('hi');
-}
-
-
 document.addEventListener("DOMContentLoaded", function(){
       var el = document.querySelector(".button-bird");
       var text = document.querySelector(".button-bird__text");
@@ -65,7 +59,6 @@ function choice(){
 
 var accept_button = document.getElementsByClassName("accept");
 var reject_button = document.getElementsByClassName("reject");
-
   
   for(i=0;i<accept_button.length;i++){
       accept_button[i].addEventListener("click",function(){  
@@ -73,23 +66,15 @@ var reject_button = document.getElementsByClassName("reject");
           this.style.display='none';
           this.previousElementSibling.innerHTML="Accepted"
           this.nextElementSibling.style.display='none';
-          this.parentElement.parentElement.remove();
-
-
+  
 
       });
 
       reject_button[i].addEventListener("click",function(){
         console.log('reject');
-        
-
         this.style.display='none';
           this.previousElementSibling.style.display="none";
           this.nextElementSibling.innerHTML='Rejected';
-          this.parentElement.parentElement.remove();
-          
-
-
       });
     
     }
@@ -110,3 +95,82 @@ function show_file(){
 
 }
 
+
+
+/*
+////////////////////slideshow///////////////////////////
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+
+  slides[slideIndex-1].style.display = "block";  
+ 
+}
+
+////////////COLLAPSABLE BUTTON///////////
+//for job description in apply section//
+var coll = document.getElementsByClassName("collapsible");
+var i;
+var jc=document.getElementsByClassName("job-content");
+
+coll[0].addEventListener('click',function(){
+  console.log('hola');
+})
+
+
+for (i = 0; i < coll.length; i++) {
+  console.log(i+'i');
+
+  coll[i].addEventListener("click", function() {
+
+      console.log("hiii"+i);
+    //jc[i].style.display='none';
+
+    console.log(this.previousElementSibling.style.display);
+
+    if(this.previousElementSibling.style.display==='' ||this.previousElementSibling.style.display==='block'){
+    this.previousElementSibling.style.display='none';
+    }
+    else if(this.previousElementSibling.style.display=== "none" ){
+    this.previousElementSibling.style.display='block';
+    }
+
+    this.classList.toggle("active");
+    
+
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = 157 + "px";
+    } 
+  });
+
+}
+
+
+function hello(){
+  console.log('Hello');
+}
+
+*/
+
+//Recuiter part

@@ -1,0 +1,14 @@
+skills: computer science, windows, programming, javascript, algorithms, swig, process, word, communication, c, open source, technical skills, c++, css, architecture, engineering, r, html, mobile, ui, java, system, email, technical, linux, sh, github, information technology, audio, coding, video, ai, ux, distribution, os, rest, python 
+$$$
+college_name: international institute of information technology 
+$$$
+disciplanes: computer science and engineering, information technology 
+$$$
+degree: master of technology, bachelor of engineering, bs 
+$$$
+designation: software engineer intern, student, software engineer 
+$$$
+mobile_number: 9179013596 
+$$$
+email: debashish.roy@students.iiit.ac.in 
+$$$

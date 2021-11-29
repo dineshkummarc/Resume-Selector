@@ -1,8 +1,8 @@
-skills: engineering, sh, technical skills, algorithms, sales, css, communication, js, mysql, ai, sublime, php, software engineering, sql, r, technical, math, database, presentation, javascript, c++, english, programming, statistics, computer science, html, mis, lan, email, os, system, design, c, java, certification, billing, training, windows, mathematics, gmail, cad, ubuntu 
+skills: engineering, sh, technical, computer science, presentation, statistics, os, training, technical skills, javascript, c++, algorithms, ubuntu, r, software engineering, email, mis, sublime, mathematics, gmail, programming, js, communication, cad, java, database, html, certification, billing, ai, math, english, system, c, sql, design, sales, css, mysql, php, windows, lan 
 $$$
 college_name: iiit hyderabad 
 $$$
-disciplanes: cse, computer science and engineering 
+disciplanes: computer science and engineering, cse 
 $$$
 degree: m. tech 
 $$$
@@ -11,6 +11,4 @@ $$$
 mobile_number: 7980298670 
 $$$
 email: schakravorty1999@gmail.com 
-$$$
-Resume: SUBHRA CHAKRAVORTY Computer Science and Engineering  Email: schakravorty1999@gmail.com Contact: +91 7980298670 55/4,KP Mukherjee Road ,  IIIT Hyderabad  Kolkata-700008  ACADEMICQUALIFICATIONS  Year 2021-Present 2017-2021 2017 2015  Degree/Certificate  Computer Science Engineering, M. Tech Computer Science Engineering, B. Tech Class XII Board (ISC) Class X Board (ICSE)  COMMUNICATIONAL SKILLS  Strong demonstration and presentation skills.  Institute/School, City IIIT Hyderabad University of Calcutta Vivekananda Mission School Vivekananda Mission School  CGPA / % - 8.31 94.6 93.25  Able to read, write and converse fluently in English, Bengali and Hindi.  TECHNICAL SKILLS  Languages  Bash , C++ , Java, MySQL, HTML, CSS, JavaScript, PHP  Platform(OS)  Ubuntu, Microsoft Windows  Software  Sublime Text, Eclipse, PHPMyAdmin  ∙  Programming and Data Structures  Computer Organization  ∙  ∙  ∙  ∙  ∙  ∙  ∙  ∙  ∙  RELEVANT COURSES UNDERTAKEN  Algorithms  Discrete Mathematics  Digital Logic  Database Management System  PROJECTS  ∙  ∙  ∙  ∙  Computer Network  Compiler Design  Probability and Statistics  ∙ Operating System  DATABASE MANAGEMENT PROJECT  (Sep - December 2019)  Art Gallery Database . Developed an Art Gallery Database as a Project for the Database Management System Course. . The application was developed using PHPMyAdmin and used MySQL as a database for storing gallery records. . The project was developed in PHP and used Chart.js for showing graph of sales history.  SOFTWARE ENGINEERING PROJECT  (Sep - December 2019)  Water Management System . Developed a Water Management System (WMS) as a Project for the Software Engineering Course. . The application was developed in PHP and used MySQL as a database for storing water consumption and  billing records.  CERTIFICATIONS  . Web Development Training in Internshala issued in Feb 2019. . Achieved an All India Rank of 575 in GATE Computer Science Engineering(CSE) 2021.  EXTRACURRICULAR ACTIVITIES  . Qualified for ACM ICPC 2019 Asia Kolkata-Kanpur onsite regional contest. . Hosted a CodeChef contest and part of the contest’s team of problem setters.  \x0c 
 $$$
